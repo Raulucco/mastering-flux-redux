@@ -3,10 +3,10 @@ module.exports = {
     module: {
         loaders: [
             {
-                loader: "babel-loader",
+                loader: 'babel-loader',
 
                 include: [
-                    path.resolve(__dirname, "src"),
+                    path.resolve(__dirname, 'src'),
                 ],
 
                 test: /\.js?$/,
@@ -20,14 +20,18 @@ module.exports = {
         ]
     },
     entry: {
-        cpanel: ["./src/control-panel.js"],
-        "message-board": ["./src/message-board.js"],
-        tasks: ["./src/tasks.js"]
+        cpanel: [
+            './src/control-panel.js'
+        ],
+        'message-board': [
+            './src/message-board.js'
+        ],
+        tasks: ['./src/tasks.js']
     },
     output: {
-        path: path.resolve(__dirname, "build"),
-        publicPath: "/assets/",
-        filename: "[name].bundle.js"
+        path: path.resolve(__dirname, 'build'),
+        publicPath: '/assets/',
+        filename: '[name].bundle.js'
     },
     devServer: { inline: true },
     devtool: 'source-map',
